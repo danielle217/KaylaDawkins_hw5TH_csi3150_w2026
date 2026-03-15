@@ -122,4 +122,11 @@ document.getElementById('filter-form').addEventListener('submit', function(e) {
         filterCars();
     });
 
+// Add event listener to the filter form to reset filters and display all cars when reset
+document.getElementById('filter-form').addEventListener('reset', function(e) {
+    mileageValue.textContent = '60,000 miles';
+    document.querySelectorAll('.make-checkbox, .color-checkbox').forEach(cb => cb.checked = false);
+    displayCars(usedCars);
+});
+
 displayCars(usedCars);
