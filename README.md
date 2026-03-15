@@ -40,7 +40,7 @@ Built as part of **CSI 3150 – Web Apps Programming I** at Oakland University (
 
 ## Live Demo
 
-🌐 [View the live site on GitHub Pages](#https://danielle217.github.io KaylaDawkins_hw5TH_csi3150_w2026/)
+🌐 [View the live site on GitHub Pages] (https://danielle217.github.io/KaylaDawkins_hw5TH_csi3150_w2026/)
 
 ---
 
