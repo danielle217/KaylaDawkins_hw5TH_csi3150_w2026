@@ -1,0 +1,107 @@
+<!--Apex Auto Dealership-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apex Auto Dealership</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/ApexAutoLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/usedCars-TH-1.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- Header section with dealership name and description-->
+    <header>
+        <h1>Apex Auto Dealership</h1>
+        <p>Your trusted source for quality used cars. We offer a wide selection of vehicles to fit every budget and
+            lifestyle. Visit us today and find your perfect car!</p>
+    </header>
+
+    <main>
+
+        <!-- Filter bar section with form inputs for filtering cars based on year, make, color, price, and mileage -->
+        <section class="filterBar">
+            <h3>I'm looking for...</h3>
+            <form id="filter-form">
+
+                <!-- Year range inputs with min and max values -->
+                <label for="year-min">Year:</label>
+                <input type="number" id="year-min" name="year-min" min="2000" max="2026" step="1" placeholder="Min">
+                <span style="color:white">—</span>
+                <input type="number" id="year-max" name="year-max" min="2000" max="2026" step="1" placeholder="Max">
+
+                <!-- Dropdown menu for selecting car make with checkboxes for multiple selections -->
+                <label>Make:</label>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Select Car Make">Select Make</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="make-checkbox" value="Toyota"> Toyota</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Honda"> Honda</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Ford"> Ford</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Chevrolet"> Chevrolet</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Nissan"> Nissan</label>
+                        <label><input type="checkbox" class="make-checkbox" value="BMW"> BMW</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Volkswagen"> Volkswagen</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Hyundai"> Hyundai</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Kia"> Kia</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Subaru"> Subaru</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Mazda"> Mazda</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Dodge"> Dodge</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Cadillac"> Cadillac</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Jaguar"> Jaguar</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Tesla"> Tesla</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Porsche"> Porsche</label>
+                        <label><input type="checkbox" class="make-checkbox" value="Lexus"> Lexus</label>
+                    </div>
+                </div>
+                
+                <!-- Dropdown menu for selecting car color with checkboxes for multiple selections -->
+                <label>Color:</label>
+                <div class="dropdown">
+                    <button type="button" class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Select Car Color">Select Color</button>
+                    <div class="dropdown-content">
+                        <label><input type="checkbox" class="color-checkbox" value="Black"> Black</label>
+                        <label><input type="checkbox" class="color-checkbox" value="White"> White</label>
+                        <label><input type="checkbox" class="color-checkbox" value="Gray"> Gray</label>
+                        <label><input type="checkbox" class="color-checkbox" value="Silver"> Silver</label>
+                        <label><input type="checkbox" class="color-checkbox" value="Blue"> Blue</label>
+                        <label><input type="checkbox" class="color-checkbox" value="Red"> Red</label>
+                        <label><input type="checkbox" class="color-checkbox" value="Green"> Green</label>
+                    </div>
+                </div>
+
+                <!-- Price range inputs with min and max values -->
+                <label for="price-min">Price:</label>
+                <input type="number" id="price-min" name="price-min" min="0" max="68000" step="1000"placeholder="Min $">
+                <span style="color:white">—</span>
+                <input type="number" id="price-max" name="price-max" min="0" max="68000" step="1000"placeholder="Max $">
+
+                <!-- Mileage slider and its display label -->
+                <label for="mileage">Mileage: <span id="mileage-value">60,000 Miles</span></label>
+                <input type="range" id="mileage" name="mileage" min="18000" max="60000" step="2000" aria-label="Max Mile filter">
+
+                <!-- Search button to trigger the filtering of cars based on selected criteria -->
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Section to display the list of available cars in the inventory -->
+        <section class="cars-list">
+            <h2>Available Cars</h2>
+            <div id="car-inventory">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2026 Apex Auto Dealership. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
